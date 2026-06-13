@@ -1,0 +1,21 @@
+data:
+  raw_path: data/raw
+  processed_path: data/processed
+
+forecast:
+  horizon_days: 28
+
+lightgbm:
+  n_estimators: 1000
+  learning_rate: 0.03
+  max_depth: 8
+  num_leaves: 64
+  subsample: 0.8
+  colsample_bytree: 0.8
+
+ensemble:
+  lightgbm_weight: 0.7
+  prophet_weight: 0.3
+
+conformal:
+  alpha: 0.05
